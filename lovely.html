@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Sudu Manike ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff0f3;
+            font-family: 'Segoe UI', sans-serif;
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        /* ප්‍රධාන කාඩ් එක - මේක තමයි හැම දේටම උඩින් තියෙන්න ඕනේ */
+        .container {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(255, 77, 109, 0.3);
+            max-width: 450px;
+            width: 85%;
+            position: relative;
+            z-index: 9999; /* මේක අනිවාර්යයි බට්න් වැඩ කරන්න */
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 { color: #ff4d6d; font-size: 24px; margin-bottom: 20px; }
+        p { color: #590d22; font-size: 17px; line-height: 1.6; margin-bottom: 15px; }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+            z-index: 10000; /* බට්න් එක තවත් උඩින් */
+        }
+
+        button:active { transform: scale(0.95); }
+
+        .btn-pink { background-color: #ff4d6d; color: white; }
+        .btn-light { background-color: #ffb3c1; color: #590d22; }
+
+        /* පසුබිමේ හාට්ස් - මේවා යටින් තියෙන්න ඕනේ */
+        .heart {
+            position: absolute;
+            background-color: #ff4d6d;
+            height: 10px; width: 10px;
+            transform: rotate(-45deg);
+            animation: heartRain linear infinite;
+            z-index: 1; 
+            opacity: 0.6;
+            pointer-events: none; /* මේක දැම්මම හාට්ස් නිසා බට්න් බ්ලොක් වෙන්නේ නෑ */
+        }
+        .heart:before, .heart:after {
+            content: ""; background-color: #ff4d6d;
+            border-radius: 50%; height: 10px; width: 10px; position: absolute;
+        }
+        .heart:before { top: -5px; left: 0; }
+        .heart:after { left: 5px; top: 0; }
+        
+        @keyframes heartRain {
+            0% { transform: translateY(-10vh) rotate(-45deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(-45deg); opacity: 0; }
+        }
+
+        /* පාවෙන ටෙක්ස්ට් - මේවා යටින් තියෙන්න ඕනේ */
+        .floating-text {
+            position: absolute;
+            color: #ff85a1;
+            font-size: 14px;
+            font-weight: bold;
+            animation: floatText linear infinite;
+            z-index: 1;
+            pointer-events: none; /* මේක දැම්මම ටෙක්ස්ට් නිසා බට්න් බ්ලොක් වෙන්නේ නෑ */
+            opacity: 0;
+        }
+
+        @keyframes floatText {
+            0% { opacity: 0; transform: translateY(0); }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { opacity: 0; transform: translateY(-30vh); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="mainContainer">
+        <div id="step1" class="fade-in">
+            <h1>Hi Sudu Manikee..... ❤️</h1>
+            <div class="btn-group">
+                <button class="btn-pink" onclick="showStep2()">hi Boola baboo</button>
+                <button class="btn-light" onclick="alert('අනේ යන්න එපා මැණික.. 🥺')">මන් කැමති නැ යනව යන්න</button>
+            </div>
+        </div><div id="step2" style="display: none;">
+            <h1>මැණික මට ආදරෙයි නේද... ❤️</h1>
+            <div class="btn-group">
+                <button class="btn-pink" onclick="showStep3()">ඔව්</button>
+                <button class="btn-light" onclick="alert('මන් දන්නවා මැණික ආදරෙයි කියලා! ❤️')">නැහැ</button>
+            </div>
+        </div>
+
+        <div id="step3" style="display: none;">
+            <h1>හනේ මැණික....උම්ම්මහ්..... ❤️</h1>
+            <p>අහන්නකෝ පැටියෝ මන් මේ ලෝකෙ දැකපු අහින්සකම හිනාව අහින්සකම ගතිගුණ ටික තියන්නෙ ඔයා ලග...</p>
+            <p>මට මෙච්චරයි කියලා කියල ඉවර කරන්න බැරි තරමේ නිදහසක් දැනෙන එකම කෙනා ඔයා....</p>
+            <p>ඉතින් ඔයාගෙ ඒ අහින්සක හැම දේටම මන් හුගාක් ඇබ්බැහි වෙලා....</p>
+            <p style="font-weight: bold; color: #d32f2f;">ඉතින් මන් සුදූට ගොඩාක් ආදරෙයි දූ......</p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            setInterval(createHeart, 300);
+            setInterval(createFloatingText, 1500);
+        };
+
+        function showStep2() {
+            document.getElementById('step1').style.display = 'none';
+            document.getElementById('step2').style.display = 'block';
+            document.getElementById('step2').classList.add('fade-in');
+        }
+
+        function showStep3() {
+            document.getElementById('step2').style.display = 'none';
+            document.getElementById('step3').style.display = 'block';
+            document.getElementById('step3').classList.add('fade-in');
+            document.body.style.backgroundColor = "#ffb3c1";
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+
+        function createFloatingText() {
+            const texts = ["I love you 😍", "ආදරෙයි මැණිකේ", "Sudu Manika", "Sudu Duu ❤️", "Forever Yours"];
+            const textNode = document.createElement('div');
+            textNode.classList.add('floating-text');
+            textNode.innerText = texts[Math.floor(Math.random() * texts.length)];
+            textNode.style.left = Math.random() * 90 + "vw";
+            textNode.style.top = Math.random() * 90 + "vh";
+            textNode.style.animationDuration = "6s";
+            document.body.appendChild(textNode);
+            setTimeout(() => textNode.remove(), 6000);
+        }
+    </script>
+</body>
+</html>
